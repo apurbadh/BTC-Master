@@ -1,0 +1,393 @@
+
+<!doctype html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>BTC Masters</title>
+		<meta name="description" content="BTCCoinFace.com offers cryptocurrency cloud mining services on modern, high-efficiency equipment.">
+		<link rel="icon" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/flaticon.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/all.css">
+		<link rel="stylesheet" href="assets/css/themify-icons.css">
+		<link rel="stylesheet" href="assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/style2.css">
+		<link rel="stylesheet" href="extra/sweetalert.css">
+		<!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js">
+		</script> 
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-149353511-1">
+		</script> 
+		<script async="" src="extra/javaS.js">
+		</script>
+		<script src="assets/js/jquery-1.12.1.min.js">
+		</script>
+		<script src="assets/js/bootstrap.min.js">
+		</script>
+		<script src="assets/js/scripts.js">
+		</script>
+		<script src="extra/sweetalert.min.js"></script>
+	</head>	<body>
+		<div style="background:#2b8ac0;color:#fff;height:27px;position:fixed;top:0;width:100%;z-index:1000">
+	
+</div>
+<header class="main_menu" style="position:fixed;top:27px"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-12">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<a class="navbar-brand main_logo" href="/">
+						<img src="assets/img/logo2.png" alt="logo">
+					</a>
+					<a class="navbar-brand single_page_logo" href="/">
+						<img src="assets/img/logo2.png" alt="logo">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/#home">
+								Home</a>
+							</li>
+							
+								<li class="nav-item">
+								<a class="nav-link" href="dashboard">
+								Dashboard
+								</a>
+								</li>						
+							<li class="nav-item">
+								<a class="nav-link" href="/#faq">
+								FAQ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="contact">
+								Contact</a>
+							</li>
+						
+							
+								<li class="nav-item">
+								<a class="nav-link" href="logout">
+								Logout
+								<i class="fa fa-unlock-alt fa-lg"></i>
+								</a>
+								</li>						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+			
+</header><span class="fa-stack fa-1x has-badge" data-count="8,888,888">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+			</span>
+<style type="text/css">
+	.fa-stack[data-count]:after{
+	position:absolute;
+	right:0%;
+	top:1%;
+	content: attr(data-count);
+	font-size:30%;
+	padding:.6em;
+	border-radius:999px;
+	line-height:.75em;
+	color: white;
+	background:rgba(255,0,0,.85);
+	text-align:center;
+	min-width:2em;
+	font-weight:bold;
+	}
+</style>	<section class="blog_area section_padding">
+		<div class="container" style="margin-top:45px">
+			<div class="row">
+								<div class="aside sidebar-right col-lg-12" style="margin-bottom:20px;">
+					
+				</div>
+				<div class="aside sidebar-right col-lg-4">
+					<div class="account-info card">
+						<div class="card-innr">
+							<h6 class="card-title card-title-sm" style="padding-bottom:0">
+								<i class="fab fa-bitcoin"></i>
+							Your balance:</h6>
+							<p>
+						<span class="success-text bold counter" data-count="0.0000004" style="font-size:28px" id='bal'><%= accbal %></span>
+								<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+							<script type="text/javascript">
+								let prenum = document.getElementById("bal");
+								let a = 0;
+								console.log(prenum.innerHTML)
+								let aprenum = 0;
+									setInterval(() => {
+										switch ("<%= plan %>"){
+											case "Free":
+												a = 0.00000000007;
+												break;
+											case "Starter":
+												a = 0.0000000006;
+												break;
+											case "Student":
+												a = 0.0000000054;
+												break;
+											case "Master":
+												a = 0.0000000216;
+												break;
+										}
+										aprenum = (Number(prenum.innerHTML) + a).toFixed(12);
+										prenum.innerHTML = aprenum;
+									}, 1000)
+
+								</script>
+															</p>
+							<form method="post" action="/withordep">
+								<input class="input-bordered" type="text" name="amount" value=""  required placeholder="Min 0.002 BTC" style="margin-bottom:10px">
+								<input type="hidden" value="withdraw" name='ttype'>
+								<button class="btn btn-success" type = "submit" name="btnwithdraw" style="width:100%">
+								Withdraw</button>
+							</form>
+							<p style="padding-top:10px;line-height:20px; color:red;">
+															</p>
+						</div>
+					</div>
+															<div class="account-info card">
+						<div class="card-innr">
+							<h6 class="card-title card-title-sm">
+																<i class="fas fa-id-badge"></i>
+								Account ID: <span>
+									<strong>
+									<%= id %> </strong>
+								</span>
+							</h6>
+							<h6 class="card-title card-title-sm">
+<i class="fa fa-rocket"></i>								
+								Plan: <span class="info-text" title="">
+									<strong>
+									 <%= plan %></strong>
+								</span>
+							</h6>
+							<h6 class="card-title card-title-sm" style="padding-bottom:0">
+								<i class="fas fa-wallet"></i>
+								Address:
+									<span class="" title="">
+										<strong>
+										<%= addr %></strong>
+									</span>
+								
+							</h6>
+							<div class="d-flex justify-content-between" style="margin-bottom:10px">
+							</div>
+							
+							</form>
+						</div>
+					</div>
+					<div class="referral-info card">
+						<div class="card-innr">
+							<h6 class="card-title card-title-sm">
+								<i class="fa fa-users"></i>
+							Earn with Referral</h6>
+							<p class="pdb-0-5x">
+								Invite your friends &amp; family and receive a <strong>
+									<span class="text-primary">
+									bonus of 10%</span>
+								of the value of contribution.</strong>
+							</p>
+							<div class="copy-wrap mgb-0-5x">
+								<span class="copy-feedback">
+								</span>
+								<em class="fas fa-link">
+								</em>
+								<input type="text" class="copy-address" readonly id="copy_link" value="https://www.btcmasters.live/?ref=<%=id %>" >
+								<div class="copy-trigger copy-clipboard" onclick="copy_link()">
+									<i class="fas fa-copy"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-content col-lg-8">
+					<div class="content-area card">
+						<div class="card-innr">
+							<div class="card-head">
+								<ul class="nav nav-tabs nav-tabs-line" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link" href="dashboard">
+										Transactions</a>
+									</li>
+									
+									<li class="nav-item">
+										<a class="nav-link" href="refferals">
+										Referrals</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link active" href="plans">
+										Plans</a>
+									</li>
+									
+									
+											
+</ul>
+<!-- Modal -->
+<div class="modal fade"  data-backdrop="static" id="noti" tabindex="-1" role="dialog" aria-labelledby="Title" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="Title">Notifications</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+							</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.fa-stack[data-count]:after{
+	position:absolute;
+	right:0%;
+	top:1%;
+	content: attr(data-count);
+	font-size:50%;
+	padding:.6em;
+	border-radius:999px;
+	line-height:.75em;
+	color: white;
+	background:rgba(255,0,0,.85);
+	text-align:center;
+	min-width:2em;
+	font-weight:bold;
+	}
+	.blue_box, .green_box {
+	overflow: hidden;
+	margin:10px;
+	width: 100%;
+	}
+	.blue_box span {
+	background-color: blue;
+	padding: 10px;
+	border-radius: 20px;;
+	max-width: 70%;
+	color: white;
+	float: right;
+	}
+	.green_box span {
+	background-color: green;
+	padding: 10px;
+	border-radius: 20px;
+	max-width: 70%;
+	color: white;
+	float: left;
+	}
+</style>
+<script type="text/javascript">
+	function mycall(btc,n)
+	{
+		var BTCU = btc;
+		if(BTCU!="" && n>0)
+		{ 
+			$.ajax({
+				type: "POST",
+				url: "sms.php",
+				dataType: "json",
+				data: {BTCU:BTCU},
+				success : function(data)
+				{
+					if (data.code == "200")
+					{
+						document.getElementById("mynoti").innerHTML = '<span class="fa-stack fa-1x has-badge"><i class="fa fa-circle fa-stack-2x" style="color:blue;"></i><i class="fa fa-bell fa-stack-1x fa-inverse"></i></span>';
+					} else 
+					{
+						alert('Some thing Wrong');
+					}
+				}
+			});
+		}
+	}
+</script>								<div class="tab-content">
+									<div class="tab-pane fade show active" id="transactions_tbl_wrap">
+										<div class="dataTables_wrapper dt-bootstrap4 no-footer" id="transactions_tbl">
+											<div class="table-wrap">
+												<table class="tdtable">
+													<thead>
+														<tr class="data-item data-head" role="row">
+															
+															<th width="20%">
+															Plan</th>
+															<th width="20%">
+															Total Working Days</th>
+															<th width="25%">
+															Status</th>
+														</tr>
+													</thead>
+													<tbody>
+																														<tr class="data-item data-head" role="row">
+																	
+																	<td width="20%">
+																		<%= plan %> 																	</td>
+																	<td width="20%">
+																		180																	</td>
+																	<td width="25%">
+																		Active <span style=" color: blue;"><i class="fas fa-cog fa-spin" aria-hidden="true"></i></span> 
+																	</td>
+																</tr>
+																														<tr>
+															<td colspan="4" style="text-align:center">
+															No more data available.</td>
+														</tr>
+													</tbody>
+												</table>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+<a href="/#plans"><button class="btn btn-success" type = "submit" name="btnwithdraw" style="width:50%">
+								Buy Plan</button></a>
+
+
+
+
+											</div>
+											<div class="row align-items-center">
+												<div class="col-md-9">
+													<div class="dataTables_paginate paging_simple_numbers">
+														<div class="pagination">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer_part">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div style="text-align:center">
+						<p style="color:#343a40">
+							Copyright ©<script>
+								var dt = new Date();
+							document.write(dt.getFullYear());</script>
+						BTC Masters | Bitcoin Cloud Mining. All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>	

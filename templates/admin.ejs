@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+</head>
+<body>
+<h1>Change Plan</h1>
+<br>
+<form method="POST" action="/adminacc">
+	<label>Account ID : </label>
+	<input type="text" name="acid">
+	<br><br>
+	<label>Plan :</label>
+	<select name="chpl">
+		<option value="Free">Free</option>
+		<option value="Starter">Starter</option>
+		<option value="Student">Student</option>
+		<option value="Master">Master</option>
+	</select>
+<br><br>
+	<button type="submit">Submit</button>
+</form>
+<br>
+<h2>Withdraw Money</h2>
+<br>
+<form method="POST" action="/witham">
+	<label>Account ID : </label>
+	<input type="text" name="acid" >
+	<br><br>
+	<label>Withdraw Amount:</label>
+	<input type="number" name="witam" step=".001">
+<br><br>
+	<button type="submit">Submit</button>
+</form>
+</body>
+</html>
